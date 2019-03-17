@@ -1,10 +1,5 @@
-import React from 'react-dom';
+import ReactDOM from 'react-dom';
+import React from 'react';
+import App from './App/App';
 
-class App extends React.component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      
-    }
-  }
-}
+ReactDOM.render(<App />, document.getElementById('DungeonHelperApp'));

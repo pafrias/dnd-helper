@@ -1,0 +1,15 @@
+.sidebar {
+  width: 15%;
+  border: 3px solid rgb(36, 17, 67);
+  padding: 20px 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.active {
+
+}
+
+.inactive {
+
+}

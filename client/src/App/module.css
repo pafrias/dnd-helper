@@ -1,0 +1,29 @@
+.app {
+  width: 100vw;
+  min-width: 800px;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  border: 3px solid rgb(236, 7, 7);
+  padding: 0px 30px;
+}
+
+.h1 {
+  font: 4em;
+}
+
+.main {
+  border: 3px solid rgb(41, 7, 236);
+  height: 70%;
+  min-height: 200px;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer {
+  border: 3px solid rgb(7, 236, 26);
+}
