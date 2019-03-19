@@ -1,0 +1,6 @@
+.console {
+  border: 3px solid rgb(41, 7, 236);
+  height: 85vh;
+  display: flex;
+  flex-direction: row;
+}

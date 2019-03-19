@@ -1,6 +1,8 @@
 .app {
   width: 100vw;
   min-width: 800px;
+  height: 100vh;
+  min-height: 800px;
   margin: 0px;
   padding: 0px;
   display: flex;
@@ -16,14 +18,15 @@
   font: 4em;
 }
 
-.main {
-  border: 3px solid rgb(41, 7, 236);
-  height: 70%;
-  min-height: 200px;
-  display: flex;
-  flex-direction: row;
-}
-
 .footer {
   border: 3px solid rgb(7, 236, 26);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.h5 {
+  font: 1em;
+  margin: 0px;
+  padding: 0px;
 }
