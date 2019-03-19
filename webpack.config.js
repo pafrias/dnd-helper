@@ -5,9 +5,9 @@ const path = require('path');
 
 
 module.exports = {
-  entry: path.resolve(__dirname, './client/src/App.jsx'),
+  entry: path.resolve(__dirname, 'client/src/index.js'),
   output: {
-    path: path.resolve(__dirname, './client/dist'),
+    path: path.resolve(__dirname, 'client/dist'),
   },
   mode: 'development',
   module: {
@@ -37,10 +37,9 @@ module.exports = {
     extensions: ['*', '.js', '.jsx'],
   },
   devServer: {
-    contentBase: path.resolve(__dirname, './client/dist'),
+    contentBase: path.resolve(__dirname, 'client/dist'),
   },
   plugins: [
-    new HtmlWebpackPlugin(),
-    // new HtmlWebpackPlugin({ template: './src/index.html' }),
+    new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'client/src/index.html') }),
   ],
 };
