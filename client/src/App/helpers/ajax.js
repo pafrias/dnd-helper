@@ -1,6 +1,6 @@
-import axios from 'axios';
+const axios = require('axios');
 
-export default {
+module.exports = {
 
   postNewCharacter(newCharacter) {
     return axios.post('api/characters', newCharacter);
