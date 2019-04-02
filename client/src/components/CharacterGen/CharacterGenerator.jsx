@@ -1,7 +1,9 @@
 /* eslint-disable jsx-a11y/label-has-for */
 import React, { useState } from 'react';
 import style from './module.css';
-import Builder from '../../../helpers/characterBuilder';
+// import Builder from '../../../helpers/characterBuilder';
+
+// import { postNewCharacter } from '../helpers/ajax';
 
 const CharacterGen = ({ handleSubmit }) => {
   const [name, setName] = useState('');

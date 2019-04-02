@@ -1,69 +1,32 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import style from './module.css';
+import style from './CharacterLibrary.css';
 import CharacterProfile from './CharacterProfile';
-// edit
-import blah from '../../actions/handleDisplayChange';
-// import style from './module.css';
-// import CharacterGenerator from './CharacterGenerator/CharacterGenerator';
+// import { getAllCharacters } from '../helpers/ajax';
 
 const mapStateToProps = ({ characters }) => ({
   characters,
 });
 
-const mapDispatchToProps = dispatch => ({
-  handleDisplayChange: (dispatch) => {
-    dispatch(blah('characterGenerator'));
-  },
-});
+// create a clicking function
 
-export function CharacterDisplay({ characters, handleClick }) {
+export function CharactersComponent({ characters }) {
   return (
     <div className={style.ui_main}>
-      <div className="create_character">
-        <div>
-          <button type="button" onClick={handleClick}>New Character</button>
-          <div className="character_display">
-            {characters.length
-              ? characters.map(character => <CharacterProfile character={character} />)
-              : null}
-          </div>
-        </div>
+      <div className="characters_display">
+        {characters.length
+          ? characters.map(character => <CharacterProfile character={character} />)
+          : null}
       </div>
     </div>
   );
 }
 
-export default CharacterDisplay;
+const CharactersContainer = connect(mapStateToProps)(CharactersComponent);
 
-// requires container export
+export default CharactersContainer;
 
 /*
-const CharacterDisplay = ({
-  characters, creationMode, handleClick, handleSubmit,
-}) => (
-  <div className={style.ui_main}>
-    <div className="create_character">
-      {creationMode
-        ? (
-          <div>
-            <button type="button" onClick={handleClick}>Return to Characters</button>
-            <CharacterGenerator handleSubmit={handleSubmit} />
-          </div>
-        )
-        : (
-          <div>
-            <button type="button" onClick={handleClick}>New Character</button>
-            <div className="character_display">
-              {characters.length
-                ? characters.map(character => <CharacterProfile character={character} />)
-                : null}
-            </div>
-          </div>
-        )}
-    </div>
-  </div>
-);
 
 const pictureStyle = (characterClass, race, gender) => ({
   background: `url(/${characterClass}/${race}-${gender}.jpg)`,

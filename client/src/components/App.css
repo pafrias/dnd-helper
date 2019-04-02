@@ -9,6 +9,30 @@
   flex-direction: column;
 }
 
+.sidebar {
+  width: 11em;
+  border: 3px solid rgb(36, 17, 67);
+  padding: 15px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.active {
+  height: 2.5em;
+  margin: 10px 0px;
+  background-color: rgb(87, 84, 84);
+  border: 1px solid #000;
+  font: 1.2em Almendra SC;
+  color: white;
+}
+
+.inactive {
+  height: 2.5em;
+  margin: 10px 0px;
+  font: 1.2em Almendra SC;
+}
+
 .header {
   border: 3px solid rgb(236, 7, 7);
   padding: 10px 30px 10px 0px;
