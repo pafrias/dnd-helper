@@ -1,8 +1,44 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import style from './module.css';
-import CharacterGenerator from './CharacterGenerator/CharacterGenerator';
+import CharacterProfile from './CharacterProfile';
+// edit
+import blah from '../../actions/handleDisplayChange';
+// import style from './module.css';
+// import CharacterGenerator from './CharacterGenerator/CharacterGenerator';
 
+const mapStateToProps = ({ characters }) => ({
+  characters,
+});
 
+const mapDispatchToProps = dispatch => ({
+  handleDisplayChange: (dispatch) => {
+    dispatch(blah('characterGenerator'));
+  },
+});
+
+export function CharacterDisplay({ characters, handleClick }) {
+  return (
+    <div className={style.ui_main}>
+      <div className="create_character">
+        <div>
+          <button type="button" onClick={handleClick}>New Character</button>
+          <div className="character_display">
+            {characters.length
+              ? characters.map(character => <CharacterProfile character={character} />)
+              : null}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default CharacterDisplay;
+
+// requires container export
+
+/*
 const CharacterDisplay = ({
   characters, creationMode, handleClick, handleSubmit,
 }) => (
@@ -57,3 +93,4 @@ const CharacterProfile = ({
 };
 
 export default CharacterDisplay;
+*/
