@@ -1,11 +1,10 @@
-// import path from 'path';
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const combineLoaders = require('webpack-combine-loaders');
 const path = require('path');
 
 
 module.exports = {
-  entry: path.resolve(__dirname, 'client/src/index.js'),
+  entry: path.resolve(__dirname, 'client/src/index.jsx'),
   output: {
     path: path.resolve(__dirname, 'client/dist'),
   },

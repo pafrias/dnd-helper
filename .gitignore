@@ -1,4 +1,6 @@
-node_modules/
-node_modules
+##### MAC FILES ###
+.DS_Store
 .vscode/
 
+/client/dist/
+node_modules/
