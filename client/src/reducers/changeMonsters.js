@@ -1,7 +1,3 @@
-import Redux from 'redux';
-
-const monstersReducer = function(state = [], {type, monsters}) {
-  return type === 'CHANGE_MONSTERS' ? monsters : state;
-};
-
-export default monstersReducer;
+export default function monstersReducer(state = [], { type, monsters }) {
+  return type === 'UPDATE_MONSTERS' ? monsters : state;
+}

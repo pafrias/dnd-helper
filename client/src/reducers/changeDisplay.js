@@ -1,7 +1,3 @@
-import Redux from 'redux';
-
-const displayReducer = function(state = 'characterLibrary', {type, display}) {
+export default function displayReducer(state = 'Character Codex', { type, display }) {
   return type === 'CHANGE_DISPLAY' ? display : state;
-};
-
-export default displayReducer;
+}

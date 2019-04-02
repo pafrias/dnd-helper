@@ -5,7 +5,7 @@ import changeMonsters from './changeMonsters';
 import changeDisplay from './changeDisplay';
 
 export default combineReducers({
-  characterLibrary: changeCharacters,
-  monsterLibrary: changeMonsters,
+  characters: changeCharacters,
+  monsters: changeMonsters,
   display: changeDisplay,
 });
