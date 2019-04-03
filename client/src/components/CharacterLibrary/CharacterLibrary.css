@@ -1,24 +1,6 @@
-.ui_main {
-  border: 3px solid rgb(36, 17, 67);
-  width:80%;
-}
-
-.characters_display {
+.characters_console {
   display: block;
-  width: 400px;
-}
-
-.character_picture {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-}
-
-.profile {
-  margin: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: normal;
-  width: 150px;
-  height: 200px;
+  width: 85%;
+  height: 85%;
+  padding: 10px;
 }

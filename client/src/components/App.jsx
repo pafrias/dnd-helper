@@ -6,9 +6,10 @@ import handleDisplayChange from '../actions/handleDisplayChange';
 
 const components = {
   'Character Codex': <CharacterLibrary />,
-  'Character Creator': <div>Hello World!</div>,
-  Beastiary: <div>Hello World!</div>,
-  'Monster Creator': <div>Hello World!</div>,
+  'Character Creator': <div>Hello Character Creator!</div>,
+  Beastiary: <div>Hello Bestiary!</div>,
+  'Monster Creator': <div>Hello Monster Creator!</div>,
+  Settings: <div>Hello Settings!</div>,
 };
 
 const displayOptions = [
@@ -16,6 +17,7 @@ const displayOptions = [
   'Character Creator',
   'Beastiary',
   'Monster Creator',
+  'Settings',
 ];
 
 const mapStateToProps = ({ display }) => ({
@@ -32,24 +34,28 @@ export function AppComponent({ display, changeDisplay }) {
   return (
     <div className={style.app}>
       <header className={style.header}>
-        <h1 className={style.h1}>Dungeon Helper</h1>
+        <h1 className={style.h1}>Dungeons and Dragons Helper</h1>
       </header>
-      <div className={style.sidebar}>
-        {displayOptions.map(option => (
-          <button
-            className={option === display ? style.active : style.inactive}
-            type="button"
-            value={option}
-            onClick={e => changeDisplay(e.target.value)}
-          >
-            {option}
-          </button>
-        ))
+      <div className={style.main}>
+        <div className={style.sidebar}>
+          {displayOptions.map(option => (
+            <button
+              className={option === display
+                ? `${style.button} ${style.active}`
+                : `${style.button} ${style.inactive}`}
+              type="button"
+              value={option}
+              onClick={e => changeDisplay(e.target.value)}
+            >
+              {option}
+            </button>
+          ))
         }
+        </div>
+        {components[display]}
       </div>
-      {components[display]}
       <footer className={style.footer}>
-        <h5 className={style.h5}>PabÇo LLC</h5>
+        <h5 className={style.h5}>Pablo Frias 2019</h5>
       </footer>
     </div>
   );

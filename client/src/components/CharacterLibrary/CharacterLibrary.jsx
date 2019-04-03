@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import style from './CharacterLibrary.css';
 import CharacterProfile from './CharacterProfile';
-// import { getAllCharacters } from '../helpers/ajax';
+import { getAllCharacters } from '../../helpers/ajax';
 
 const mapStateToProps = ({ characters }) => ({
   characters,
@@ -12,12 +12,10 @@ const mapStateToProps = ({ characters }) => ({
 
 export function CharactersComponent({ characters }) {
   return (
-    <div className={style.ui_main}>
-      <div className="characters_display">
-        {characters.length
-          ? characters.map(character => <CharacterProfile character={character} />)
-          : null}
-      </div>
+    <div className={style.characters_console}>
+      {characters.length
+        ? characters.map(character => <CharacterProfile character={character} />)
+        : null}
     </div>
   );
 }

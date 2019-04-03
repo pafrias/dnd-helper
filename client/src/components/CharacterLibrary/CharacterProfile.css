@@ -1,0 +1,15 @@
+.character_picture {
+  width: 80px;
+  height: 80px;
+  background-color: rgb(95, 228, 18);
+  border-radius: 50%;
+}
+
+.profile {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  width: 150px;
+  height: 200px;
+}
