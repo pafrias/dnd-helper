@@ -1,12 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import CharacterLibrary from './CharacterLibrary/CharacterLibrary';
+import CharacterCreator from './CharacterCreator/CharacterCreator';
 import style from './App.css';
 import handleDisplayChange from '../actions/handleDisplayChange';
 
 const components = {
   'Character Codex': <CharacterLibrary />,
-  'Character Creator': <div>Hello Character Creator!</div>,
+  'Character Creator': <CharacterCreator />,
   Beastiary: <div>Hello Bestiary!</div>,
   'Monster Creator': <div>Hello Monster Creator!</div>,
   Settings: <div>Hello Settings!</div>,
