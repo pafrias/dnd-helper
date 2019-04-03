@@ -1,5 +1,5 @@
 .characters_console {
-  display: block;
+  display: flex;
   width: 85%;
   height: 85%;
   padding: 10px;
